@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Input, Message } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import './broadcast.css';
 
 import { mapState, mapDispatch } from './broadcast.controller'
 
@@ -12,13 +13,14 @@ const BroadcastTab = ({ broadcasted, error, loading, broadcastMessage }) => {
 	};
 
 	return (
-		<div>
+		<div className="broadcast-container">
 			<Input
 				placeholder="Enter message to broadcast"
 				value={message}
 				onChange={(e) => setMessage(e.target.value)}
+				className="broadcast-input"
 			/>
-			<Button onClick={handleBroadcast} color="blue" loading={loading} disabled={loading}>Broadcast</Button>
+			<Button onClick={handleBroadcast} color="blue" loading={loading} disabled={loading} className="broadcast-button">Broadcast</Button>
 			{broadcasted && <Message success content="Message broadcasted to all devices!" />}
 			{error && <Message error content={`Broadcast failed: ${error}`} />}
 		</div>

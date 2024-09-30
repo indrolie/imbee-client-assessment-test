@@ -1,0 +1,33 @@
+.subscribe-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	height: 100vh;
+	background-color: #f9f9f9;
+	color: white;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.subscribe-button {
+	font-size: 18px;
+	background-color: #FFC107;
+	color: black;
+	border: none;
+	padding: 10px 20px;
+	transition: background-color 0.3s;
+}
+  
+.subscribe-button:hover {
+	background-color: #FF9800;
+}
+  
+.success-message {
+	margin-top: 20px;
+}
+  
+.error-message {
+	margin-top: 20px;
+}
+  
