@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { subscribeToNotification, subscriptionSucceed, subscriptionFailed } from '../action/action';
+import { subscriptionSucceed, subscriptionFailed } from '../action/action';
 import { SUBSCRIBE_TO_NOTIFICATION, SUBSCRIPTION_SUCCEED, SUBSCRIPTION_FAILED } from '../type/type';
 import api from '../../apis/index';
 

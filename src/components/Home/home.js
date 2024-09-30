@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Tab from '../Tab'
+import Tab from '../Tab/tab'
 
 class Home extends Component {
 	render() {

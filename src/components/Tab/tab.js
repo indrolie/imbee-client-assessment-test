@@ -1,11 +1,15 @@
 import React from 'react'
 import { TabPane, Tab } from 'semantic-ui-react'
 
+import SubscribeTab from '../Subscription/subscription'
+
 const panes = [
 	{
 		menuItem: 'Send notification',
 		render: () => (
-			<TabPane>Tab 1 Content</TabPane>
+			<TabPane>
+				<SubscribeTab/>
+			</TabPane>
 		)
 	},
 	{
