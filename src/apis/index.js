@@ -28,6 +28,21 @@ const api = {
             throw new Error('Failed to subscribe');
         }
         return await response.json();
+    },
+    broadcastMessage: async(message) => {
+        console.log('Broadcasting this message: ', message)
+
+        const response = await fetch(process.env.REACT_APP_IMBEE_BACKEND + '/broadcast', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message })
+        });
+        if (!response.ok) {
+            throw new Error('Failed to broadcast');
+        }
+        return await response.json();
     }
 };
 

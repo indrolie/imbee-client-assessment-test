@@ -2,6 +2,7 @@ import React from 'react'
 import { TabPane, Tab } from 'semantic-ui-react'
 
 import SubscribeTab from '../Subscription/subscription'
+import BroadcastTab from '../Broadcast/broadcast'
 
 const panes = [
 	{
@@ -15,13 +16,9 @@ const panes = [
 	{
 		menuItem: 'Subscribe to notification',
 		render: () => (
-			<TabPane>Tab 2 Content</TabPane> 
-		)
-	},
-	{
-		menuItem: 'Dashboard',
-		render: () => (
-			<TabPane>Tab 3 Content</TabPane>
+			<TabPane>
+				<BroadcastTab/>
+			</TabPane> 
 		)
 	}
 ]
