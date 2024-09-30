@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { mapState, mapDispatch } from './broadcast.controller'
 
-const BroadcastTab = ({ success, error, broadcastMessage }) => {
+const BroadcastTab = ({ broadcasted, error, loading, broadcastMessage }) => {
 	const [message, setMessage] = useState('');
 
 	const handleBroadcast = () => {
@@ -18,8 +18,8 @@ const BroadcastTab = ({ success, error, broadcastMessage }) => {
 				value={message}
 				onChange={(e) => setMessage(e.target.value)}
 			/>
-			<Button onClick={handleBroadcast} color="blue">Broadcast</Button>
-			{success && <Message success content="Message broadcasted to all devices!" />}
+			<Button onClick={handleBroadcast} color="blue" loading={loading} disabled={loading}>Broadcast</Button>
+			{broadcasted && <Message success content="Message broadcasted to all devices!" />}
 			{error && <Message error content={`Broadcast failed: ${error}`} />}
 		</div>
 	);

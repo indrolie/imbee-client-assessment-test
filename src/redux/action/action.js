@@ -1,5 +1,5 @@
 import { SUBSCRIBE_TO_NOTIFICATION, SUBSCRIPTION_SUCCEED, SUBSCRIPTION_FAILED,
-    BROADCAST_MEESAGE, BROADCAST_SUCCEED, BROADCAST_FAILED } from "../type/type";
+    BROADCAST_MESSAGE, BROADCAST_SUCCEED, BROADCAST_FAILED } from "../type/type";
 
 export const subscribeToNotification = () => ({
     type: SUBSCRIBE_TO_NOTIFICATION
@@ -15,7 +15,7 @@ export const subscriptionFailed = (error) => ({
 });
 
 export const broadcastMessage = (message) => ({
-    type: BROADCAST_MEESAGE,
+    type: BROADCAST_MESSAGE,
     payload: {
         message
     }

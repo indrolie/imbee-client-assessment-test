@@ -1,6 +1,6 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import { subscriptionSucceed, subscriptionFailed, broadcastSucceed, broadcastFailed } from '../action/action';
-import { SUBSCRIBE_TO_NOTIFICATION, BROADCAST_MEESAGE } from '../type/type';
+import { SUBSCRIBE_TO_NOTIFICATION, BROADCAST_MESSAGE } from '../type/type';
 import api from '../../apis/index';
 
 function* subscribeToNotification() {
@@ -26,7 +26,7 @@ function* broadcastMessage(action) {
 function* rootSaga() {
     yield all([
         takeLatest(SUBSCRIBE_TO_NOTIFICATION, subscribeToNotification),
-        takeLatest(BROADCAST_MEESAGE, broadcastMessage)
+        takeLatest(BROADCAST_MESSAGE, broadcastMessage)
     ])
 }
 
