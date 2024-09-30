@@ -16,6 +16,18 @@ const api = {
     subscribeToNotification: async () => {
         const token = await getFirebaseToken()
         console.log('The token: ', token)
+
+        const response = await fetch(process.env.REACT_APP_IMBEE_BACKEND + '/subscribe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ token })
+        });
+        if (!response.ok) {
+            throw new Error('Failed to subscribe');
+        }
+        return await response.json();
     }
 };
 
