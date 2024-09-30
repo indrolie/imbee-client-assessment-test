@@ -3,12 +3,12 @@ importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase-messaging.js');
 
 try {
     firebase.initializeApp({
-        apiKey: process.env.REACT_APP_FIREBASE_CLIENT_APIKEY,
-        authDomain: process.env.REACT_APP_FIREBASE_CLIENT_AUTH_DOMAIN,
-        projectId: process.env.REACT_APP_FIREBASE_CLIENT_PROJECT_ID,
-        storageBucket: process.env.REACT_APP_FIREBASE_CLIENT_STORAGE_BUCKET,
-        messagingSenderId: process.env.REACT_APP_FIREBASE_CLIENT_MESSAGING_SENDER_ID,
-        appId: process.env.REACT_APP_FIREBASE_CLIENT_APP_ID
+        apiKey: 'AIzaSyAiqB6GYIbZeEpZ9cdnnr9b6qZJpAzOguA',
+        authDomain: 'imbee-assessment-test.firebaseapp.com',
+        projectId: 'imbee-assessment-test',
+        storageBucket: 'imbee-assessment-test.appspot.com',
+        messagingSenderId: '158649144617',
+        appId: '1:158649144617:web:758acc9699a9a736869338'
     });
 
     const messaging = firebase.messaging();
