@@ -13,14 +13,23 @@ const BroadcastTab = ({ broadcasted, error, loading, broadcastMessage }) => {
 	};
 
 	return (
-		<div className="broadcast-container">
+		<div style={{ margin: '10px'}}>
 			<Input
 				placeholder="Enter message to broadcast"
 				value={message}
 				onChange={(e) => setMessage(e.target.value)}
 				className="broadcast-input"
+				style={{ height: '80px'}}
 			/>
-			<Button onClick={handleBroadcast} color="blue" loading={loading} disabled={loading} className="broadcast-button">Broadcast</Button>
+			<Button
+				onClick={handleBroadcast}
+				style={{ 'background-color': '#2f3033', color: 'white', height: '45px' }}
+				loading={loading}
+				disabled={loading}
+				className="broadcast-button"
+			>
+				Broadcast
+			</Button>
 			{broadcasted && <Message success content="Message broadcasted to all devices!" />}
 			{error && <Message error content={`Broadcast failed: ${error}`} />}
 		</div>

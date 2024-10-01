@@ -8,16 +8,16 @@ const panes = [
 	{
 		menuItem: 'Send notification',
 		render: () => (
-			<TabPane>
-				<SubscribeTab/>
+			<TabPane style={{ 'min-height': 'calc(100vh - 115px)'}}>
+				<BroadcastTab/>
 			</TabPane>
 		)
 	},
 	{
 		menuItem: 'Subscribe to notification',
 		render: () => (
-			<TabPane>
-				<BroadcastTab/>
+			<TabPane style={{ 'min-height': 'calc(100vh - 115px)'}}>
+				<SubscribeTab/>
 			</TabPane> 
 		)
 	}

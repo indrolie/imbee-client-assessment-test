@@ -11,9 +11,15 @@ const SubscribeTab = ({ subscribed, loading, error, subscribe }) => {
 	};
   
 	return (
-		<div className="subscribe-container">
-			<Button className="subscribe-button" onClick={handleSubscribe} color="green" loading={loading} disabled={loading}>
-				Subscribe to Notifications
+		<div style={{ margin: '50px auto', 'border-radius': '10px' }}>
+			<Button
+				className="subscribe-button"
+				onClick={handleSubscribe}
+				loading={loading}
+				disabled={loading}
+				style={{ height: '45px', 'background-color': '#2f3033', color: 'white' }}
+			>
+				Subscribe to Notification
 			</Button>
 			{subscribed && <Message className="success-message" success content="Subscribed!" />}
 			{error && <Message className="error-message"error content="Sorry, for some reasons we can't subscribe you now :( Please try again later." />}
