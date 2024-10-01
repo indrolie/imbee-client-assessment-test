@@ -15,7 +15,7 @@ const BroadcastTab = ({ broadcasted, error, loading, broadcastMessage }) => {
 	return (
 		<div style={{ margin: '10px'}}>
 			<Input
-				placeholder="Enter message to broadcast"
+				placeholder="Enter the message to broadcast . . . . ."
 				value={message}
 				onChange={(e) => setMessage(e.target.value)}
 				className="broadcast-input"
